@@ -1,0 +1,788 @@
+/* Reset default margin and padding */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  'Poppins', sans-serif;
+    background: #D9E5F3;
+}
+
+/* Style for the header logo */
+header {
+    width: 1260px;
+    height: 163px;
+    top: -36px;
+    border-radius: 13px;
+    background: white;
+}
+header img.logo {
+    width: 123.14px;
+    height: 52.27px; 
+    position: absolute;
+    top: 50px; 
+    left: 51px;
+}
+
+/* Styles for the vectors */
+.vector {
+    position: absolute;
+}
+
+.Ellipse--13 {
+    top: 318px;
+    left: 0;
+    z-index: 2;
+    }
+
+.Ellipse--12 {
+    width: 181px;
+    height: 181px;
+    top: 444px;
+    left: 1050px;
+}
+
+.vector--4 {
+    width: 1327.84px;
+    height: 470.33px;
+    top: 549.03px;
+    left: -44.78px;
+    transform: -9.29deg;
+}
+
+.vector--5 {
+    width: 1050px;
+    height: 326px;
+    top: 604px;
+    left: 229px;
+    transform: rotate(-180deg);
+}
+
+.Group--201 {
+    width: 111px;
+    height: 185px;
+    top: 787px;
+    left: 968px;
+}
+
+.vector--1 {
+    width: 1328px;
+    height: 152px;
+    top: 896px;
+    left: -37px;
+}
+
+/*Styles User/Admin Buttons */
+.icon-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+.icon-container button {
+    margin: 10px; 
+    padding: 20px; 
+    background-color: #007bff; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.icon-container button:hover {
+    background-color: #0056b3; 
+}
+
+/* Register and Login   */
+.wrapper {
+    display: none;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: .2s ease;
+}
+
+.wrapper.active {
+    height: 620px;
+    overflow-y: scroll; 
+}
+
+.wrapper .form-box {
+    width: 403px;
+    height: auto;
+}
+
+.wrapper .form-box.login {
+    transition: transform .18s ease;
+    transform: translateY(0);
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-10px);
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper.active .form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+.form-box h1 {
+    width: 365px;
+    height: 50px;
+    margin-top: 25%;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 32px;
+    margin-left: 10%;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #134077;
+}
+
+.input-group {
+    width: 450px;
+    height: 454px;
+    top: 249px;
+    left: 389px;
+    margin-bottom: 5px;
+    border-radius: 19px;
+    border: 1px solid #ccc; 
+    background-color: white; 
+    padding: 20px;
+    align-items: center;
+}
+
+.input-box {
+    margin-bottom: 20px; 
+    position:  relative;  
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box p {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 13px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 5px; 
+}
+
+.input-box input {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 10px;
+    font-size: 1rem;
+    color: #0041DF;
+    line-height: 80px;
+    z-index: 1;
+}
+
+.password input {
+    padding-right: 30px;
+}
+
+.input-box .btn {
+    width: 100%;
+    height: 40px;
+    border-radius: 11px;
+    background: #0057FF;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    border-bottom: none;
+    border: none;
+    outline: none;
+}
+
+.input-box .btn:hover {
+    background-color: #0041DF;
+}
+
+.form-box p {
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+.form-box p a {
+    color: #2D224C;
+    ; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.form-box p a:hover {
+    text-decoration: underline; 
+}
+
+
+/*dashboard}*/
+#dashboard-heading {
+    position: absolute;
+    top: 100px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    font-family: 'DM Sans', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #134077;
+    text-align: center;
+    width: 100%;
+}
+
+/* button container */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.button-event {
+    cursor: pointer;
+    z-index: 2;
+    color: #333;
+    background-color: #fff;
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 20px;
+    right: 40px; 
+}
+
+.button-logout {
+    cursor: pointer;
+    z-index: 2;
+    color: #333;
+    background-color: #fff;
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    top: 20px; 
+    left: 40px;
+}
+
+.button-logout:hover, .button-event:hover {
+    background-color:  #888; 
+}
+
+ /* user-events */
+#user-events {
+    position: absolute; 
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%); 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 80%; 
+    max-width: 1000px; 
+}
+
+.user-event-container {
+    width: calc(33.33% - 20px); 
+    max-width: 250px; 
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 20px; 
+    border: 1px solid #134077;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.user-event-title {
+    width: 232px;
+    height: 36px;
+    top: 359px;
+    left: 195px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: "DM Sans";
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 35.82px;
+    text-align: left;
+    color: #231F20;
+}
+
+
+.user-event-date,
+.user-event-time {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    display: inline-block; 
+    text-align: left; 
+    line-height: 19.9px;
+    gap: 0px;
+    opacity: 0px;
+    color: #CCCCCC;
+}
+
+.user-event-join-button {
+    width: 239px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+    background: #0057FF;
+    color: white;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px; 
+}
+
+.user-event-join-button:hover {
+    background-color: #0c2d55;
+}
+
+/*style for  eventFormContainer */
+#eventFormContainer {
+    display: none;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 9999;
+}
+
+#eventFormContainer h2 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#userSelectionDiv {
+    max-height: 200px; 
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+#userSelectionDiv label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#addEventForm {
+    font-weight: 600;
+    text-align: left;
+}
+
+#addEventForm label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#addEventForm input[type="text"],
+#addEventForm input[type="date"],
+#addEventForm input[type="time"] {
+    width: calc(100% - 20px); 
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.event-form-btn,
+.cancel-btn {
+    padding: 10px 20px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.event-form-btn {
+    background-color: #4caf50;
+    color: white;
+}
+
+.event-form-btn:hover {
+    background-color: #45a049;
+}
+
+.cancel-btn {
+    background-color: #f44336;
+    color: white;
+    margin-left: 10px;
+}
+
+.cancel-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Wrapper admin-dashboard */
+.wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.container-fluid {
+    background-color: #f2f2f2;
+    padding: 60px;
+}
+
+.row {
+    margin-right: -25px;
+    margin-left: -35px;
+}
+
+/* Table Styles */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-collapse: collapse;
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table th,
+.table td {
+    padding: 1.25rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+
+/* styles for action buttons */
+#action-buttons button {
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-button {
+    color: white;
+    margin-right: 3px;
+    border: none;
+    border-radius: 3px;
+    background: grey;
+    cursor: pointer;
+    transition: background-color 0.7s ease;
+}
+
+.view-button:hover {
+    background-color: #0056b3;
+}
+
+.edit-button {
+    color: white;
+    margin-right: 3px;
+    border: none;
+    border-radius: 3px;
+    background: grey;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.edit-button:hover {
+    background-color: #218838;
+}
+
+.delete-button {
+    color: white;
+    margin-right: 5px;
+    border: none;
+    border-radius: 3px;
+    background: grey;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/*Popup Modal for Viewing Event Details*/
+#viewPopup {
+    position: absolute;
+    top: 10%; 
+    left: 35%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; 
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    max-width: 600px; 
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Media queries for small screens */
+@media (max-width: 668px) {
+    header {
+        width: 100%; 
+        min-width: 368px; 
+        max-width: 668px; 
+        height: 100px; 
+        padding: 0 20px; 
+        box-sizing: border-box;
+    }
+    header img.logo {
+        top: 15px; 
+    }
+    .wrapper .form-box {
+        width: 60%;
+        margin-left: auto; 
+        margin-right: auto; 
+        position: relative; 
+        left: unset; 
+        transform: unset; 
+    }
+    .input-group {
+        width: 100%; 
+        max-width: 400px; 
+    }
+    
+    .form-box h1 {
+        margin-left: -30px;
+        font-size: 12px;
+        text-align: center;
+    }
+    
+
+    /* Vectors */
+    .vector {
+        display: block;
+    }
+    .vector--1,
+    .vector--4 {
+        width: 100%;
+        min-width: 365px;
+        max-width: 668px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .vector--5 {
+        width: 100%;
+        min-width: 365px; 
+        max-width: 668px; 
+        left: auto; 
+    }
+    .Ellipse--12,
+    .Group--201 {
+        max-width: 100px;
+        height: auto; 
+        left: 75%; 
+    }
+    .Ellipse--13 {
+        width: 20%; 
+    }
+    #dashboard-heading {
+        font-size: 14px; 
+        top: 20%;
+    }
+    #user-events {
+        flex-wrap: wrap; 
+        justify-content: center; 
+    }
+    .user-event-container {
+        width: calc(100% - 20px); 
+        margin-right: 0; 
+        margin-bottom: 20px; 
+    }
+    #logout-btn {
+        font-size: 8px; 
+        padding: 4px; 
+    }
+    .container-fluid {
+        padding: 10px; 
+        z-index: 2;
+    }
+    .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .table th,
+    .table td {
+        padding: 0.75rem; 
+    }
+    #action-buttons button {
+        padding: 3px; 
+    }
+    .view-button,
+    .edit-button,
+    .delete-button {
+        margin-right: 2px; 
+    }
+}
+
+
+/* Media queries for medium screens */
+@media (min-width: 669px) and (max-width: 1399px) {
+    header {
+        width: 100%; 
+        min-width: 669px; 
+        max-width: 1399px; 
+        height: 100px; 
+        padding: 0 20px; 
+        box-sizing: border-box;
+    }
+    header img.logo {
+        top: 15px; 
+    }
+
+    .wrapper {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%; 
+        min-width: 669px; 
+        max-width: 1399px;
+        transition: .2s ease;
+    }
+    /* Form box */
+    .wrapper .form-box {
+        max-width: 50%;
+    }
+    .input-group{
+        max-width: 130%;
+    }
+
+    /* Vectors */
+    .vector {
+        display: block;
+    }
+    .vector--1,
+    .vector--4 {
+        width: 100%;
+        min-width: 669px;
+        max-width: 1399px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+    }
+    .vector--5 {
+        width: 100%;
+        min-width: 699px; 
+        max-width: 1399px; 
+        left: auto;  
+    }
+    .Ellipse--12,
+    .Group--201 {
+        max-width: 120px;
+        height: auto; 
+        left: 85%; 
+    }
+    .Ellipse--13 {
+        width: 10%; 
+    }
+
+    #dashboard-heading {
+        font-size: 26px; 
+        top: 15%;
+    }  
+    .user-event-container {
+        width: calc(50% - 20px);
+    }
+}
+
+
+/* Media queries for large screens */
+@media (min-width: 1400px) {
+    header {
+        width: 100%;
+        height: 120px;
+    }
+    .Ellipse--12,
+    .Group--201 {
+        max-width: 150px;
+        height: auto; 
+        left: 90%; 
+    }
+    .vector--5 {
+        width: 100%;
+        min-width: 1400px; 
+        left: auto;  
+    }
+    .vector--1,
+    .vector--4 {
+        width: 100%;
+        min-width: 1200px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .wrapper {
+        align-items: center;
+    }
+    #dashboard-heading {
+        font-size: 36px; 
+        top: 10%;
+    }
+}
+
+

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible"  content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img src="./assets/logo.png"alt="Logo" class="logo">
+    </header>
+
+
+
+    <!-- Vectors -->
+    <div class="vector-container">
+        <img src="./assets/Ellipse 13.png" alt="" class="vector Ellipse--13">
+        <img src="./assets/Ellipse 12.png" alt="" class="vector Ellipse--12">
+        <img src="./assets/Vector 5.png" alt="" class="vector vector--5">
+        <img src="./assets/Vector 4.png" alt="" class="vector vector--4">
+        <img src="./assets/Group 201.png" alt="" class="vector Group--201">
+        <img src="./assets/Vector 1.png" alt="" class="vector vector--1">
+    </div>
+
+     <!-- User/Admin Buttons -->
+     <div class="icon-container">
+        <button onclick="showUserForm()" class="user-button">User</button>
+        <button onclick="showAdminForm()" class="admin-button">Admin</button>
+    </div>
+
+    <!-- Register and Login -->
+    <div class="wrapper active">
+
+    <!-- Admin Register -->
+    <div class="form-box register admin-register" style="display: none;">
+        <h1>Create Admin Account</h1>
+        <div class="input-group">
+            <form action="#">
+                <div class="input-box">
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="admin-name" name="name" placeholder="Admin Name" required>
+                </div>
+                <div class="input-box">
+                    <label>Email</label>
+                    <input type="email" class="form-control" id="admin-register-email" name="email" placeholder="name@example.com" required>
+                </div>
+                <div class="input-box">
+                    <label>Password</label>
+                    <span class="icon toggle-password" data-target="admin-register-password">
+                        <ion-icon name="eye"></ion-icon>
+                    </span>
+                    <input type="password" class="form-control" id="admin-register-password" name="password" placeholder="Enter password" required>
+                </div>
+                <div class="input-box">
+                    <button type="button" onclick="saveAdminData()" class="btn register-button">Register as Admin</button>
+                </div>
+                <p>Already have an account? <a href="#" class="login-link" data-type="admin">Login</a></p>
+            </form>
+        </div>
+    </div>
+        <!-- Admin Login -->
+        <div class="form-box login admin-login" style="display: none;">
+            <h1>Admin Login</h1>
+            <div class="input-group">
+                <form action="#">
+                    <div class="input-box">
+                        <label>Email</label>
+                        <input type="email" class="form-control" id="admin-login-email" name="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="input-box">
+                        <label>Password</label>
+                        <span class="icon toggle-password" data-target="admin-login-password">
+                            <ion-icon name="eye"></ion-icon>
+                        </span>
+                        <input type="password" class="form-control" id="admin-login-password" name="password" placeholder="Enter password" required>   
+                    </div>
+                    <div class="input-box">
+                        <button type="submit" onclick="adminLogin()" class="btn login-button">Login as Admin</button>
+                    </div>
+                    <p>Don't have an account? <a href="#" class="register-link" data-type="admin">Register</a></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- User Register -->
+        <div class="form-box register user-register">
+            <h1>Crea il tuo account</h1>
+            <div class="input-group">
+                <form action="#">
+                    <div class="input-box">
+                        <label>Inserisci il nome</label>
+                        <input type="text" class="form-control" id="user-first-name" name="Name" placeholder="Mario " required>
+                    </div>
+                    <div class="input-box">
+                        <label>Inserisci il nome</label>
+                        <input type="text" class="form-control" id="user-last-name" name="Name" placeholder="Rossi " required>
+                    </div>
+                    <div class="input-box">
+                        <label>Inserisci l’email</label>name@example.com
+                        <input type="email" class="form-control" id="user-register-email" name="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="input-box">
+                        <label>Inserisci la password</label>
+                        <span class="icon toggle-password" data-target="user-register-password">
+                            <ion-icon name="eye"></ion-icon>
+                        </span>
+                        <input type="password" class="form-control" id="user-register-password" name="password" placeholder="Scrivila qui" required>
+                    </div>
+                    <div class="input-box">
+                        <button type="button" onclick="saveUserData()" class="btn register-button">REGISTRATI</button>
+                    </div>
+                    <p>Hai già un account? <a href="#" class="login-link" data-type="user">Accedi</a></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- User Login -->
+        <div class="form-box login user-login">
+            <h1>Hai già un account?</h1>
+            <div class="input-group">
+                <form action="#">
+                    <div class="input-box">
+                        <label>Inserisci l’e-mail</label>
+                        <input type="email" class="form-control" id="user-login-email" name="email" placeholder="name@example.com" required>
+                    </div>
+                    <div class="input-box">
+                        <label>Inserisci la password</label>
+                        <span class="icon toggle-password" data-target="user-login-password">
+                            <ion-icon name="eye"></ion-icon>
+                        </span>
+                        <input type="password" class="form-control" id="user-login-password" name="password" placeholder="Scrivila qui" required>   
+                    </div>
+                    <div class="input-box">
+                        <button type="submit" onclick="userLogin()" class="btn login-button" >ACCEDI</button>
+                    </div>
+                    <p>Non hai ancora un profilo? <a href="#" class="register-link" data-type="user">Registrati</a></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div class="dashboard" style="display: none;">
+            <h2 id="dashboard-heading"></h2>
+            <div class="button-container">
+                <div class="button-logout">
+                    <div id="button" onclick="logOut()" >Logout</div>
+                </div>
+                <div class="button-event">
+                    <div id="add-event-btn" onclick="showEventForm()">Add Event</div>
+                </div>
+            </div>
+
+            <!-- User Dashboard -->
+            <div id="user-accounts"></div>
+            <div id="user-events"></div>
+            <div id="user-event-tables"></div>
+
+            <!-- Admin dashboard -->
+            <div id="eventFormContainer" style="display: none;">
+                <h2>Select Users</h2>
+                <div id="userSelectionDiv">
+                    <!-- Registered Users will be dynamically added here -->
+                </div>
+
+                <!-- Event Form -->
+                <form id="addEventForm">
+                    <label for="eventTitle">Event Title:</label>
+                    <input type="text" id="eventTitle" name="eventTitle" required><br>
+                    <label for="eventDate">Event Date:</label>
+                    <input type="date" id="eventDate" name="eventDate" required><br>
+                    <label for="eventTime">Event Time:</label>
+                    <input type="time" id="eventTime" name="eventTime" required><br>
+                    <label for="eventLink">Join Link:</label>
+                    <input type="text" id="eventLink" name="eventLink"><br>
+                    <button class="event-form-btn" type="submit">Submit Event</button>
+                    <button type="button" class="cancel-btn" onclick="closeEventForm()">Cancel</button>
+                </form>
+            </div>
+
+                <!-- Popup Modal for Viewing Event Details -->
+                <div id="viewPopup" class="modal" style="display: none;">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeViewPopup()">&times;</span>
+                        <h2>Event Details</h2>
+                        <p><strong>Title:</strong> <span id="viewTitle"></span></p>
+                        <p><strong>Date:</strong> <span id="viewDate"></span></p>
+                        <p><strong>Time:</strong> <span id="viewTime"></span></p>
+                        <p><strong>Users:</strong> <span id="viewUserList"></span></p>
+                    </div>
+                </div>
+
+            
+                <div class="wrapper admin-dashboard">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <table id="admin-event-tables" class="table-responsive">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th class="event-title">Event Title</th>
+                                        <th class="event-date">Event Date</th>
+                                        <th class="event-time">Event Time</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- Admin events will be dynamically rendered here -->
+                                    <tr>
+                                        <td class="action-buttons">
+                                            <button class=" view-button" title="View Record" onclick="viewEvent()">
+                                                View
+                                            </button>                                            
+                                            <button class=" edit-button" title="Edit Record" onclick="editEvent(eventIndex)">
+                                                Edit
+                                            </button>
+                                            <button class=" delete-button" title="Delete Record" onclick="deleteEvent()">
+                                                Delete
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                
+                
+        
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
