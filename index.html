@@ -33,34 +33,6 @@
 
     <!-- Register and Login -->
     <div class="wrapper active">
-
-    <!-- Admin Register -->
-    <div class="form-box register admin-register" style="display: none;">
-        <h1>Create Admin Account</h1>
-        <div class="input-group">
-            <form action="#">
-                <div class="input-box">
-                    <label>Name</label>
-                    <input type="text" class="form-control" id="admin-name" name="name" placeholder="Admin Name" required>
-                </div>
-                <div class="input-box">
-                    <label>Email</label>
-                    <input type="email" class="form-control" id="admin-register-email" name="email" placeholder="name@example.com" required>
-                </div>
-                <div class="input-box">
-                    <label>Password</label>
-                    <span class="icon toggle-password" data-target="admin-register-password">
-                        <ion-icon name="eye"></ion-icon>
-                    </span>
-                    <input type="password" class="form-control" id="admin-register-password" name="password" placeholder="Enter password" required>
-                </div>
-                <div class="input-box">
-                    <button type="button" onclick="saveAdminData()" class="btn register-button">Register as Admin</button>
-                </div>
-                <p>Already have an account? <a href="#" class="login-link" data-type="admin">Login</a></p>
-            </form>
-        </div>
-    </div>
         <!-- Admin Login -->
         <div class="form-box login admin-login" style="display: none;">
             <h1>Admin Login</h1>
@@ -68,19 +40,18 @@
                 <form action="#">
                     <div class="input-box">
                         <label>Email</label>
-                        <input type="email" class="form-control" id="admin-login-email" name="email" placeholder="name@example.com" required>
+                        <input type="email" class="form-control" id="admin-login-email" name="email" placeholder="name@gmail.com" required>
                     </div>
                     <div class="input-box">
                         <label>Password</label>
                         <span class="icon toggle-password" data-target="admin-login-password">
                             <ion-icon name="eye"></ion-icon>
                         </span>
-                        <input type="password" class="form-control" id="admin-login-password" name="password" placeholder="Enter password" required>   
+                        <input type="password" class="form-control" id="admin-login-password" name="password" placeholder="Scrivila qui" required>   
                     </div>
                     <div class="input-box">
                         <button type="submit" onclick="adminLogin()" class="btn login-button">Login as Admin</button>
                     </div>
-                    <p>Don't have an account? <a href="#" class="register-link" data-type="admin">Register</a></p>
                 </form>
             </div>
         </div>

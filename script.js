@@ -159,7 +159,6 @@ function showAdminForm() {
     document.querySelector('.user-register').style.display = 'none';
     document.querySelector('.user-login').style.display = 'none';
     // Show admin forms
-    document.querySelector('.admin-register').style.display = 'none';
     document.querySelector('.admin-login').style.display = 'block';
     // Hide user button
     document.querySelector('.user-button').style.display = 'none';
@@ -194,9 +193,21 @@ function saveAdminData() {
 function adminLogin() {
     const adminEmail = document.getElementById('admin-login-email').value;
     const adminPassword = document.getElementById('admin-login-password').value;
-    const admin = admins.find(admin => admin.email === adminEmail && admin.password === adminPassword);
-    if (admin) {
-        currentUser = admin;
+    
+    // Check if the email matches Teresia's email
+    if (adminEmail !== 'teresia.yieldplus.uk@gmail.com') {
+        alert('Only Admins are allowed to log in.');
+        return;
+    }
+    
+    // Check if the password is correct
+    if (adminPassword !== '1234') {
+        alert('Incorrect password. Please try again.');
+        return;
+    }
+    
+    if (adminEmail) {
+        currentUser = adminEmail;
         localStorage.setItem('currentUser', JSON.stringify(currentUser)); // Save current user to localStorage
         document.querySelector('.wrapper').classList.remove('active');
         document.querySelector('.dashboard').style.display = 'block';
