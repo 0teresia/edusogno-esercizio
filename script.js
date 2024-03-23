@@ -141,7 +141,6 @@ function registerForm() {
 // Function to show user registration form and hide others
 function showUserForm() {
     // Hide admin forms
-    document.querySelector('.admin-register').style.display = 'none';
     document.querySelector('.admin-login').style.display = 'none';
     // Show user forms
     document.querySelector('.user-register').style.display = 'none';
